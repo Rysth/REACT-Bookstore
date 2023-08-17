@@ -11,15 +11,17 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [Future Features](#future-features)
+
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Commands](#commands)
   - [Test](#test)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -27,9 +29,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 REACT PROJECT NAME <a name="about-project"></a>
+# 📖 REACT Bookstore <a name="about-project"></a>
 
-- **REACT PROJECT NAME** ...
+- **REACT Bookstore** is a website where users can found their favorites Books being able to comment, edit, remove or update their progress. Built with HTML, CSS, JavaScript, and React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,15 +44,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Feature 1
-- Feature 2
-- Feature 3
-
-### Future Features <a name="future-features"></a>
-
-- Future Feature 1
-- Future Feature 2
-- Future Feature 3
+- Display a list of books
+- Add a book
+- Remove a selected book
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,8 +59,8 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Template.git
-cd REACT-Template
+git clone https://github.com/Rysth/REACT-Bookstore.git
+cd REACT-Bookstore
 code . (To open VS Code Editor)
 ```
 
@@ -103,6 +99,13 @@ _Use at the end '--fix' to help you out with any error._
 
 - GitHub: [@rysthcraft](https://github.com/Rysth)
 - Linkedin: [@johnpalacios](https://www.linkedin.com/in/john-rysthcraft/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🔭 Future Features <a name="future-features"></a>
+
+- Implement a DataBase
+- Deploy the Application in Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
