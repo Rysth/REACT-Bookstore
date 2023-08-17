@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 REACT PROJECT NAME <a name="about-project"></a>
+# 📖 REACT Bookstore <a name="about-project"></a>
 
-- **REACT PROJECT NAME** ...
+- **REACT Bookstore** is a website where users can found their favorites Books being able to comment, edit, remove or update their progress. Built with HTML, CSS, JavaScript, and React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,15 +42,14 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Display a list of books
+- Add a book
+- Remove a selected book
 
 ### Future Features <a name="future-features"></a>
 
-- Future Feature 1
-- Future Feature 2
-- Future Feature 3
+- Implement a DataBase
+- Deploy the Application in Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,8 +62,8 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Template.git
-cd REACT-Template
+git clone https://github.com/Rysth/REACT-Bookstore.git
+cd REACT-Bookstore
 code . (To open VS Code Editor)
 ```
 
