@@ -4,8 +4,19 @@ function Form() {
   return (
     <form action="#" className="form">
       <div className="form-group">
-        <label htmlFor="hello" className="form-label">
-          <input type="text" name="hello" id="hello" className="form-input" />
+        <label htmlFor="title" className="form-label">
+          <input type="text" name="title" id="title" className="form-input" placeholder="Title.." />
+        </label>
+      </div>
+      <div className="form-group">
+        <label htmlFor="author" className="form-label">
+          <input
+            type="text"
+            name="author"
+            id="author"
+            className="form-input"
+            placeholder="Author.."
+          />
         </label>
       </div>
     </form>

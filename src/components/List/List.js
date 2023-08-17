@@ -1,15 +1,33 @@
 import React from 'react';
-import Book from '../Book/Book';
+import ListItem from './ListItem';
+
+const bookData = [
+  {
+    ID: 'book-1',
+    category: 'Action',
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    ID: 'book-2',
+    category: 'Science Fiction',
+    title: 'Dune',
+    author: 'Frank Herbert',
+  },
+  {
+    ID: 'book-3',
+    category: 'Economy',
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
 
 function List() {
   return (
     <ul className="list">
-      <li className="list-item">
-        <Book />
-      </li>
-      <li className="list-item">
-        <Book />
-      </li>
+      {bookData.map((book) => (
+        <ListItem key={book.ID} book={book} />
+      ))}
     </ul>
   );
 }

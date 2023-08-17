@@ -11,15 +11,17 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [Future Features](#future-features)
+
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Commands](#commands)
   - [Test](#test)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -45,11 +47,6 @@
 - Display a list of books
 - Add a book
 - Remove a selected book
-
-### Future Features <a name="future-features"></a>
-
-- Implement a DataBase
-- Deploy the Application in Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,6 +99,13 @@ _Use at the end '--fix' to help you out with any error._
 
 - GitHub: [@rysthcraft](https://github.com/Rysth)
 - Linkedin: [@johnpalacios](https://www.linkedin.com/in/john-rysthcraft/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🔭 Future Features <a name="future-features"></a>
+
+- Implement a DataBase
+- Deploy the Application in Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
