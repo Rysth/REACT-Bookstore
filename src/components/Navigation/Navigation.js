@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
@@ -12,7 +13,7 @@ function Navigation() {
             </Link>
           </li>
           <li className="header-item">
-            <Link to="/" className="header-link">
+            <Link to="/categories" className="header-link">
               Categories
             </Link>
           </li>
