@@ -19,6 +19,11 @@ function Form() {
           />
         </label>
       </div>
+      <div className="form-group">
+        <button type="submit" className="form-button submit">
+          Submit
+        </button>
+      </div>
     </form>
   );
 }
