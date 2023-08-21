@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = { books: [] };
 
-export const bookSlice = createSlice({
+export const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
@@ -19,4 +19,4 @@ export const bookSlice = createSlice({
   },
 });
 
-export const bookActions = bookSlice.actions;
+export const booksActions = booksSlice.actions;
