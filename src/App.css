@@ -1,3 +1,8 @@
-.App {
-  width: 500px;
+:root {
+  --CL-primary-blue: #0290ff;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
