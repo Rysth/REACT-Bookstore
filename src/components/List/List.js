@@ -1,31 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import ListItem from './ListItem';
 
-const bookData = [
-  {
-    ID: 'book-1',
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-  },
-  {
-    ID: 'book-2',
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-  },
-  {
-    ID: 'book-3',
-    category: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-  },
-];
-
 function List() {
+  const { books } = useSelector((store) => store.books);
+
   return (
     <ul className="list">
-      {bookData.map((book) => (
+      {books.map((book) => (
         <ListItem key={book.ID} book={book} />
       ))}
     </ul>
