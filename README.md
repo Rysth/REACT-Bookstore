@@ -102,7 +102,7 @@ _Use at the end '--fix' to help you out with any error._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
 - Implement a DataBase
 - Deploy the Application in Render
