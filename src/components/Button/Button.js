@@ -2,7 +2,15 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropType from 'prop-types';
 
-function Button({ classList, buttonType, text, handleData }) {
+function Button(
+  /* prettier-ignore */
+  {
+    classList,
+    buttonType,
+    text,
+    handleData,
+  },
+) {
   return (
     <button type={buttonType ? 'submit' : 'button'} className={classList} onClick={handleData}>
       {text}
