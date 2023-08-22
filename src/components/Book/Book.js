@@ -5,9 +5,7 @@ import { useDispatch } from 'react-redux';
 import { booksActions } from '../../redux/books/booksSlice';
 import Button from '../Button/Button';
 
-/* eslint-disable */
 function Book({ ID, category, title, author }) {
-  /* eslint-enable */
   const dispatch = useDispatch();
 
   /* Event to remove a new Book */
