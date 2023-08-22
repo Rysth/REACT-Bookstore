@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropType from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { booksActions } from '../../redux/books/booksSlice';
@@ -28,19 +27,9 @@ function Book(bookData) {
         <h2 className="book-title">{title}</h2>
         <h3 className="book-author">{author}</h3>
         <div className="book-actions">
-          <Button
-            classList="book-button"
-            text="Comments"
-          />
-          <Button
-            classList="book-button"
-            text="Remove"
-            handleData={handleRemove}
-          />
-          <Button
-            classList="book-button"
-            text="Edit"
-          />
+          <Button classList="book-button" text="Comments" />
+          <Button classList="book-button" text="Remove" handleData={handleRemove} />
+          <Button classList="book-button" text="Edit" />
         </div>
       </header>
     </div>
