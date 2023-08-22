@@ -10,6 +10,7 @@ function Book({ ID, category, title, author }) {
   /* eslint-enable */
   const dispatch = useDispatch();
 
+  /* Event to remove a new Book */
   const handleRemove = () => {
     dispatch(booksActions.removeBook(ID));
   };

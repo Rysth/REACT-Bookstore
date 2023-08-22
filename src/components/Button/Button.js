@@ -2,9 +2,11 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropType from 'prop-types';
 
-function Button({ classList, text, handleData }) {
+/* eslint-disable */
+function Button({ classList, buttonType, text, handleData }) {
+  /* eslint-enable */
   return (
-    <button type="button" className={classList} onClick={handleData}>
+    <button type={buttonType ? 'submit' : 'button'} className={classList} onClick={handleData}>
       {text}
     </button>
   );
@@ -12,9 +14,11 @@ function Button({ classList, text, handleData }) {
 
 Button.defaultProps = {
   handleData: () => {},
+  buttonType: '',
 };
 
 Button.propTypes = {
+  buttonType: PropType.string,
   classList: PropType.string.isRequired,
   text: PropType.string.isRequired,
   handleData: PropType.func,
