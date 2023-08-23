@@ -1,10 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../Button/Button';
-import { booksActions } from '../../redux/books/booksSlice';
+import { sendNewBook } from '../../redux/books/booksSlice';
 
 function Form() {
   const dispatch = useDispatch();
+  const { applicationID } = useSelector((store) => store.apps);
 
   /* Event to Add a new Book */
   const handleSubmit = (e) => {
@@ -20,7 +21,12 @@ function Form() {
       category: 'Sports',
     };
 
-    dispatch(booksActions.addBook(bookObject));
+    dispatch(
+      sendNewBook({
+        applicationID,
+        bookObject,
+      }),
+    );
 
     e.target.reset();
   };

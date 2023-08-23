@@ -16,6 +16,24 @@ export const fetchBooks = createAsyncThunk(
   },
 );
 
+export const sendNewBook = createAsyncThunk(
+  'books/sendNewBook',
+  async (payload, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${payload.applicationID}/books`,
+        payload.bookObject,
+      );
+      if (!response) {
+        return Error('Not possible to send a new book.');
+      }
+      return payload.bookObject;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  },
+);
+
 const initialState = {
   books: [],
   error: '',
@@ -26,10 +44,7 @@ export const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
-      const newBook = {
-        ...action.payload,
-      };
-      state.books.push(newBook);
+      state.books.push(action.payload);
     },
     removeBook: (state, action) => {
       const ID = action.payload;
@@ -42,6 +57,9 @@ export const booksSlice = createSlice({
     });
     builder.addCase(fetchBooks.rejected, (state, action) => {
       state.error = action.payload;
+    });
+    builder.addCase(sendNewBook.fulfilled, (state, action) => {
+      state.books.push(action.payload);
     });
   },
 });

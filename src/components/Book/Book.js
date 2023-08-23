@@ -4,10 +4,9 @@ import { useDispatch } from 'react-redux';
 import { booksActions } from '../../redux/books/booksSlice';
 import Button from '../Button/Button';
 
-function Book(bookData) {
+function Book({ ID, bookData }) {
   /* prettier-ignore */
   const {
-    ID,
     category,
     title,
     author,
@@ -37,8 +36,8 @@ function Book(bookData) {
 }
 
 Book.propTypes = {
+  ID: PropType.string.isRequired,
   bookData: PropType.shape({
-    ID: PropType.string.isRequired,
     category: PropType.string.isRequired,
     title: PropType.string.isRequired,
     author: PropType.string.isRequired,

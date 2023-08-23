@@ -5,7 +5,7 @@ import Book from '../Book/Book';
 function ListItem({ book }) {
   return (
     <li className="list-item">
-      <Book ID={book.item_id} category={book.category} title={book.title} author={book.author} />
+      <Book ID={book.item_id} bookData={book} />
     </li>
   );
 }
