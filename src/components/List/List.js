@@ -11,7 +11,7 @@ function List({ applicationID }) {
 
   useEffect(() => {
     dispatch(fetchBooks(applicationID));
-  }, [dispatch]);
+  }, [dispatch, applicationID]);
 
   useEffect(() => {}, [books]);
 

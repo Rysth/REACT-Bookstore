@@ -5,11 +5,10 @@
   --CL-primary-blue: #0290ff;
   --CL-primary-blue-two: #4386bf;
   --CL-primary-black-two: #121212;
-  --CL-primary-white-two: #ffffff;
+  --CL-primary-white-two: #fff;
   --CL-primary-white-three: #e8e8e8;
   --CL-primary-pale-gray: #f5f6fa;
-  --CL-primary-gray: #888888;
-
+  --CL-primary-gray: #888;
   --FF-primary: 'Montserrat', sans-serif;
   --FF-secondary: 'Roboto Slab', sans-serif;
 }

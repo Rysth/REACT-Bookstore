@@ -55,6 +55,10 @@
 .book-separator {
   color: var(--CL-primary-white-three);
   font-size: 1.2rem;
+  max-width: 10em;
+  opacity: 0.25;
+  display: block;
+  margin: 1em auto;
 }
 
 .book-button {
@@ -99,13 +103,6 @@
 .book-status {
   margin: 0;
   opacity: 0.5;
-}
-
-.book-separator {
-  max-width: 10em;
-  opacity: 0.25;
-  display: block;
-  margin: 1em auto;
 }
 
 .book-vertical {
@@ -188,7 +185,9 @@
   }
 
   .book-separator {
-    margin: 1em 0;
+    pointer-events: none;
+    margin: 0.5em 0.25em;
+    font-size: 1.5rem;
   }
 
   .book-button {
@@ -196,19 +195,8 @@
     padding: 0;
   }
 
-  .book-button {
-    width: max-content;
-    transition: 0.15s;
-  }
-
   .book-button:hover {
     color: var(--CL-primary-black-two);
-  }
-
-  .book-separator {
-    pointer-events: none;
-    margin: 0.5em 0.25em;
-    font-size: 1.5rem;
   }
 
   .book-progress {
@@ -219,7 +207,7 @@
   }
 
   .book-vertical {
-    width: 0px;
+    width: 0;
     height: 6em;
     margin: 1em 5em;
   }
