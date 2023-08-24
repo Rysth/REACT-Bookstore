@@ -1,11 +1,11 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import PropType from 'prop-types';
 import Button from '../Button/Button';
 import { sendNewBook } from '../../redux/books/booksSlice';
 
-function Form() {
+function Form({ applicationID }) {
   const dispatch = useDispatch();
-  const { applicationID } = useSelector((store) => store.apps);
 
   /* Event to Add a new Book */
   const handleSubmit = (e) => {
@@ -63,5 +63,9 @@ function Form() {
     </form>
   );
 }
+
+Form.propTypes = {
+  applicationID: PropType.string.isRequired,
+};
 
 export default Form;

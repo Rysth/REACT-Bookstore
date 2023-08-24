@@ -15,8 +15,8 @@ function Home() {
   return (
     <div className="home">
       <h2 className="home-title">Welcome to Bookstore!</h2>
-      <List />
-      <Form />
+      <List applicationID={applicationID} />
+      <Form applicationID={applicationID} />
     </div>
   );
 }
