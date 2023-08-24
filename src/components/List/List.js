@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { fetchBooks } from '../../redux/books/booksSlice';
 import ListItem from './ListItem';
 
 function List({ applicationID }) {
   const { books } = useSelector((store) => store.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks(applicationID));
+  }, [dispatch]);
 
   useEffect(() => {}, [books]);
 

@@ -18,7 +18,6 @@ export const fetchApplication = createAsyncThunk(
 const initialState = {
   applicationID: '',
   error: '',
-  isLoading: true,
 };
 
 export const appsSlice = createSlice({
@@ -27,8 +26,13 @@ export const appsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchApplication.fulfilled, (state, action) => {
-      state.applicationID = action.payload;
-      state.isLoading = false;
+      const item = localStorage.getItem('applicationID');
+      if (!item) {
+        localStorage.setItem('applicationID', action.payload);
+        state.applicationID = action.payload;
+        return;
+      }
+      state.applicationID = item;
     });
     builder.addCase(fetchApplication.rejected, (state, action) => {
       state.error = action.payload;

@@ -9,11 +9,11 @@ import Home from './components/Pages/Home';
 function App() {
   /* Create the Application ID */
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((store) => store.apps);
+  const { applicationID } = useSelector((store) => store.apps);
 
   useEffect(() => {
     dispatch(fetchApplication());
-  }, [dispatch]);
+  }, [dispatch, applicationID]);
 
   return (
     <div className="App">
@@ -21,7 +21,10 @@ function App() {
         <BrowserRouter>
           <Navigation />
           <Routes>
-            <Route path="/" element={isLoading ? 'Loading...' : <Home />} />
+            <Route
+              path="/"
+              element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
+            />
             <Route path="/categories" element={null} />
           </Routes>
         </BrowserRouter>

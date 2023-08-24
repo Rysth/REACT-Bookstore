@@ -8,8 +8,7 @@ export const fetchBooks = createAsyncThunk(
       const response = await axios.get(
         `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${applicationID}/books`,
       );
-      const data = await response.json();
-      return data;
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -24,6 +23,7 @@ export const sendNewBook = createAsyncThunk(
         `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${payload.applicationID}/books`,
         payload.bookObject,
       );
+
       if (!response) {
         return Error('Not possible to send a new book.');
       }
@@ -67,7 +67,18 @@ export const booksSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
-      state.books = action.payload;
+      const castedObject = Object.entries(action.payload).map((item) => item);
+      const castedArray = castedObject.map((item) => {
+        const bookData = item[1][0];
+        const castedBook = {
+          item_id: item[0],
+          category: bookData.category,
+          title: bookData.title,
+          author: bookData.author,
+        };
+        return castedBook;
+      });
+      state.books = castedArray;
     });
     builder.addCase(fetchBooks.rejected, (state, action) => {
       state.error = action.payload;
