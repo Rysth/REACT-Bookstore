@@ -1,3 +1,38 @@
+.form-title {
+  font-size: 1.5rem;
+  color: var(--CL-primary-gray);
+  text-transform: uppercase;
+}
+
 .form {
-  width: 500px;
+  display: grid;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid var(--CL-primary-white-three);
+  border-radius: 0.25em;
+  font-size: 0.9rem;
+}
+
+.form-button {
+  padding: 1em;
+  font-size: 0.9rem;
+  width: 10em;
+  background-color: var(--CL-primary-blue);
+  border: none;
+  border-radius: 0.25em;
+  color: var(--CL-primary-white-two);
+  text-transform: uppercase;
+  font-family: var(--FF-secondary);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .form {
+    grid-template-columns: repeat(3, 1fr) max-content;
+  }
 }

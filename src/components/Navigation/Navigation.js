@@ -5,12 +5,12 @@ import './Navigation.css';
 function Navigation() {
   return (
     <div className="header">
-      <div className="header-left">
-        <h1 className="header-title">Bookstore CMS</h1>
-        <nav className="header-nav">
+      <div className="header-content container">
+        <nav className="header-left">
+          <h1 className="header-title">Bookstore CMS</h1>
           <ul className="header-list">
             <li className="header-item">
-              <Link to="/" className="header-link">
+              <Link to="/" className="header-link active">
                 Books
               </Link>
             </li>
@@ -21,9 +21,13 @@ function Navigation() {
             </li>
           </ul>
         </nav>
-      </div>
-      <div className="header-right">
-        <p>User</p>
+        <div className="header-right">
+          <div className="header-user">
+            <button className="header-button" type="button">
+              <i className="fa-solid fa-user" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchBooks } from '../../redux/books/booksSlice';
 import ListItem from './ListItem';
+import './List.css';
 
 function List({ applicationID }) {
   const { books } = useSelector((store) => store.books);
@@ -10,7 +11,7 @@ function List({ applicationID }) {
 
   useEffect(() => {
     dispatch(fetchBooks(applicationID));
-  }, [dispatch]);
+  }, [dispatch, applicationID]);
 
   useEffect(() => {}, [books]);
 

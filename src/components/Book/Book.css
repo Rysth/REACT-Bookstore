@@ -1,3 +1,233 @@
 .book {
-  width: 500px;
+  background-color: var(--CL-primary-white-two);
+  padding: 2em 1em 2.25em 1em;
+  border: 1px solid var(--CL-primary-white-three);
+  border-radius: 0.5em;
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.book-header {
+  text-align: center;
+}
+
+.book-category,
+.book-title {
+  color: var(--CL-primary-black-two);
+}
+
+.book-category {
+  opacity: 0.5;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.book-title,
+.book-author,
+.book-button {
+  font-family: var(--FF-secondary);
+}
+
+.book-title {
+  margin: 0.25em 0 0 0;
+}
+
+.book-author,
+.book-button {
+  color: var(--CL-primary-blue-two);
+  font-weight: 300;
+}
+
+.book-author {
+  font-weight: 300;
+  margin: 0.25em 0 0.5em 0;
+  font-size: 0.85rem;
+}
+
+.book-actions {
+  margin: 0.75em auto 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 20em;
+}
+
+.book-separator {
+  color: var(--CL-primary-white-three);
+  font-size: 1.2rem;
+  max-width: 10em;
+  opacity: 0.25;
+  display: block;
+  margin: 1em auto;
+}
+
+.book-button {
+  font-size: 0.9rem;
+  width: 6em;
+  background: none;
+  border: none;
+}
+
+.book-button:focus {
+  outline: none;
+}
+
+.book-progress {
+  margin: 1em 0 0 0;
+}
+
+.book-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.book-image {
+  display: inline-block;
+  max-width: 5.5em;
+}
+
+.book-percent,
+.book-status,
+.book-separator {
+  color: var(--CL-primary-black-two);
+}
+
+.book-percent {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.book-status {
+  margin: 0;
+  opacity: 0.5;
+}
+
+.book-vertical {
+  margin: 1em auto;
+  max-width: 15em;
+  opacity: 0.25;
+  color: var(--CL-primary-black-two);
+}
+
+.book-right {
+  text-align: center;
+}
+
+.book-part,
+.book-chapter {
+  color: var(--CL-primary-black-two);
+  font-family: var(--FF-secondary);
+}
+
+.book-part,
+.book-button.update {
+  text-transform: uppercase;
+}
+
+.book-part {
+  opacity: 0.5;
+  font-size: 0.85rem;
+  margin: 1em 0 0 0;
+}
+
+.book-chapter {
+  font-size: 1rem;
+  margin: 0.5em;
+}
+
+.book-button.update {
+  background-color: var(--CL-primary-blue);
+  width: 15em;
+  padding: 0.75em;
+  margin: 0.5em 0 0 0;
+  color: var(--CL-primary-white-two);
+  border-radius: 0.25em;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 875px) {
+  .book {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    padding: 2em;
+    max-width: 100%;
+  }
+
+  .book-header {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .book-title {
+    font-size: 1.7rem;
+  }
+
+  .book-author {
+    margin: 0;
+  }
+
+  .book-category,
+  .book-author {
+    font-size: 1rem;
+  }
+
+  .book-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.35em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .book-separator {
+    pointer-events: none;
+    margin: 0.5em 0.25em;
+    font-size: 1.5rem;
+  }
+
+  .book-button {
+    width: max-content;
+    padding: 0;
+  }
+
+  .book-button:hover {
+    color: var(--CL-primary-black-two);
+  }
+
+  .book-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .book-vertical {
+    width: 0;
+    height: 6em;
+    margin: 1em 5em;
+  }
+
+  .book-right {
+    text-align: left;
+  }
+
+  .book-part,
+  .book-button.update {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .book-chapter {
+    font-size: 1.25rem;
+    margin: 0.5em 0;
+  }
+
+  .book-button.update {
+    margin: 1em 0 0 0;
+  }
 }

@@ -2,13 +2,15 @@ import React from 'react';
 import PropType from 'prop-types';
 import List from '../List/List';
 import Form from '../Form/Form';
+import './Home.css';
 
 function Home({ applicationID }) {
   return (
     <div className="home">
-      <h2 className="home-title">Welcome to Bookstore!</h2>
-      <List applicationID={applicationID} />
-      <Form applicationID={applicationID} />
+      <div className="container h-100">
+        <List applicationID={applicationID} />
+        <Form applicationID={applicationID} />
+      </div>
     </div>
   );
 }

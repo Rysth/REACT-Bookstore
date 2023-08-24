@@ -16,19 +16,17 @@ function App() {
   }, [dispatch, applicationID]);
 
   return (
-    <div className="App">
-      <div className="container">
-        <BrowserRouter>
-          <Navigation />
-          <Routes>
-            <Route
-              path="/"
-              element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
-            />
-            <Route path="/categories" element={null} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+    <div className="app">
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route
+            path="/"
+            element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
+          />
+          <Route path="/categories" element={<Home applicationID={applicationID} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
