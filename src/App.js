@@ -17,18 +17,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <BrowserRouter>
-          <Navigation />
-          <Routes>
-            <Route
-              path="/"
-              element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
-            />
-            <Route path="/categories" element={null} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route
+            path="/"
+            element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
+          />
+          <Route path="/categories" element={null} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

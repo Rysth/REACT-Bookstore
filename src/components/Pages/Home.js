@@ -6,9 +6,11 @@ import Form from '../Form/Form';
 function Home({ applicationID }) {
   return (
     <div className="home">
-      <h2 className="home-title">Welcome to Bookstore!</h2>
-      <List applicationID={applicationID} />
-      <Form applicationID={applicationID} />
+      <div className="container">
+        <h2 className="home-title">Welcome to Bookstore!</h2>
+        <List applicationID={applicationID} />
+        <Form applicationID={applicationID} />
+      </div>
     </div>
   );
 }

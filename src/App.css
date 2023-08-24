@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 :root {
   --CL-primary-blue: #0290ff;
+  --CL-primary-black-two: #121212;
+  --CL-primary-white-three: #e8e8e8;
+  --FF-primary: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 1em;
+  font-family: var(--FF-primary);
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
