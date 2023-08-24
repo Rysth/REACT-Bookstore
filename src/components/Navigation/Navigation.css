@@ -25,6 +25,7 @@
   opacity: 0.5;
   color: var(--CL-primary-black-two);
   font-size: 1rem;
+  letter-spacing: 0.15em;
 }
 
 .header-link.active {
@@ -45,4 +46,25 @@
 
 .header-button:focus {
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+
+  .header-left {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+  }
+
+  .header-list {
+    display: inherit;
+  }
+
+  .header-item {
+    margin: 0 1em;
+  }
 }
