@@ -16,7 +16,7 @@ function App() {
   }, [dispatch, applicationID]);
 
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Navigation />
         <Routes>
