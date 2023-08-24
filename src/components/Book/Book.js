@@ -1,13 +1,12 @@
 import React from 'react';
 import PropType from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { booksActions } from '../../redux/books/booksSlice';
+import { removeBook } from '../../redux/books/booksSlice';
 import Button from '../Button/Button';
 
-function Book(bookData) {
+function Book({ ID, bookData, applicationID }) {
   /* prettier-ignore */
   const {
-    ID,
     category,
     title,
     author,
@@ -17,7 +16,12 @@ function Book(bookData) {
 
   /* Event to remove a new Book */
   const handleRemove = () => {
-    dispatch(booksActions.removeBook(ID));
+    dispatch(
+      removeBook({
+        applicationID,
+        itemID: ID,
+      }),
+    );
   };
 
   return (
@@ -37,12 +41,13 @@ function Book(bookData) {
 }
 
 Book.propTypes = {
+  ID: PropType.string.isRequired,
   bookData: PropType.shape({
-    ID: PropType.string.isRequired,
     category: PropType.string.isRequired,
     title: PropType.string.isRequired,
     author: PropType.string.isRequired,
   }).isRequired,
+  applicationID: PropType.string.isRequired,
 };
 
 export default Book;

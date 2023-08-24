@@ -2,10 +2,10 @@ import React from 'react';
 import PropType from 'prop-types';
 import Book from '../Book/Book';
 
-function ListItem({ book }) {
+function ListItem({ book, applicationID }) {
   return (
     <li className="list-item">
-      <Book ID={book.item_id} category={book.category} title={book.title} author={book.author} />
+      <Book ID={book.item_id} bookData={book} applicationID={applicationID} />
     </li>
   );
 }
@@ -17,6 +17,7 @@ ListItem.propTypes = {
     title: PropType.string.isRequired,
     author: PropType.string.isRequired,
   }).isRequired,
+  applicationID: PropType.string.isRequired,
 };
 
 export default ListItem;

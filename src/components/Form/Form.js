@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropType from 'prop-types';
 import Button from '../Button/Button';
-import { booksActions } from '../../redux/books/booksSlice';
+import { sendNewBook } from '../../redux/books/booksSlice';
 
-function Form() {
+function Form({ applicationID }) {
   const dispatch = useDispatch();
 
   /* Event to Add a new Book */
@@ -20,7 +21,12 @@ function Form() {
       category: 'Sports',
     };
 
-    dispatch(booksActions.addBook(bookObject));
+    dispatch(
+      sendNewBook({
+        applicationID,
+        bookObject,
+      }),
+    );
 
     e.target.reset();
   };
@@ -57,5 +63,9 @@ function Form() {
     </form>
   );
 }
+
+Form.propTypes = {
+  applicationID: PropType.string.isRequired,
+};
 
 export default Form;
