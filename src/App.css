@@ -8,6 +8,7 @@
   --CL-primary-white-two: #ffffff;
   --CL-primary-white-three: #e8e8e8;
   --CL-primary-pale-gray: #f5f6fa;
+  --CL-primary-gray: #888888;
 
   --FF-primary: 'Montserrat', sans-serif;
   --FF-secondary: 'Roboto Slab', sans-serif;
@@ -26,14 +27,22 @@ body {
 
 body {
   font-family: var(--FF-primary);
+  background-color: var(--CL-primary-pale-gray);
 }
 
 button {
   cursor: pointer;
 }
 
+input,
+label,
+textarea,
+select {
+  font-family: var(--FF-primary);
+}
+
 .app {
-  height: 100vh;
+  height: 100%;
 }
 
 .container {

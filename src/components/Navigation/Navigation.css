@@ -1,4 +1,8 @@
 .header {
+  background-color: var(--CL-primary-white-two);
+}
+
+.header-content {
   text-align: center;
 }
 
@@ -49,7 +53,7 @@
 }
 
 @media (min-width: 768px) {
-  .header {
+  .header-content {
     display: grid;
     grid-template-columns: 1fr max-content;
   }

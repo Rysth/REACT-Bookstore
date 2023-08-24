@@ -1,6 +1,6 @@
 .book {
   background-color: var(--CL-primary-white-two);
-  padding: 1em;
+  padding: 2em 1em 2.25em 1em;
   border: 1px solid var(--CL-primary-white-three);
   border-radius: 0.5em;
 }
@@ -44,7 +44,7 @@
 .book-actions {
   margin: 0.75em auto 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 20em;
 }
@@ -56,7 +56,7 @@
 
 .book-button {
   font-size: 0.9rem;
-  width: 6.5em;
+  width: 6em;
   background: none;
   border: none;
 }
@@ -138,6 +138,7 @@
   margin: 0.5em 0 0 0;
   color: var(--CL-primary-white-two);
   border-radius: 0.25em;
+  letter-spacing: 0.1em;
 }
 
 @media (min-width: 768px) {
@@ -211,7 +212,7 @@
 
   .book-part,
   .book-button.update {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0;
   }
 
