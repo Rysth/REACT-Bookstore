@@ -3,6 +3,8 @@
   padding: 2em 1em 2.25em 1em;
   border: 1px solid var(--CL-primary-white-three);
   border-radius: 0.5em;
+  max-width: 30em;
+  margin: 0 auto;
 }
 
 .book-header {
@@ -33,6 +35,7 @@
 .book-author,
 .book-button {
   color: var(--CL-primary-blue-two);
+  font-weight: 300;
 }
 
 .book-author {
@@ -105,6 +108,13 @@
   margin: 1em auto;
 }
 
+.book-vertical {
+  margin: 1em auto;
+  max-width: 15em;
+  opacity: 0.25;
+  color: var(--CL-primary-black-two);
+}
+
 .book-right {
   text-align: center;
 }
@@ -141,11 +151,12 @@
   letter-spacing: 0.1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 875px) {
   .book {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 500px 1fr;
     padding: 2em;
+    max-width: 100%;
   }
 
   .book-header {
@@ -156,7 +167,7 @@
   }
 
   .book-title {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 
   .book-author {
@@ -196,14 +207,21 @@
 
   .book-separator {
     pointer-events: none;
+    margin: 0.5em 0.25em;
+    font-size: 1.5rem;
   }
 
   .book-progress {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10em;
     margin: 0;
+  }
+
+  .book-vertical {
+    width: 0px;
+    height: 6em;
+    margin: 1em 5em;
   }
 
   .book-right {

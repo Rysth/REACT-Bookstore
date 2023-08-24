@@ -24,7 +24,7 @@ function App() {
             path="/"
             element={applicationID === '' ? 'Loading...' : <Home applicationID={applicationID} />}
           />
-          <Route path="/categories" element={null} />
+          <Route path="/categories" element={<Home applicationID={applicationID} />} />
         </Routes>
       </BrowserRouter>
     </div>
