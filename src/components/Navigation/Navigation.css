@@ -34,7 +34,7 @@
 
 .header-button {
   padding: 1em;
-  width: 3.5em;
+  width: 3.45em;
   margin: 1em 0;
   font-size: 1rem;
   position: relative;
@@ -52,6 +52,10 @@
   .header {
     display: grid;
     grid-template-columns: 1fr max-content;
+  }
+
+  .header-title {
+    margin: 0em 0;
   }
 
   .header-left {

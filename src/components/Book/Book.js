@@ -48,7 +48,7 @@ function Book({ ID, bookData, applicationID }) {
             <p className="book-status">Completed</p>
           </div>
         </div>
-        <hr className="book-separator" />
+        {/* <hr className="book-separator" /> */}
         <div className="book-right">
           <p className="book-part">Current Progress</p>
           <p className="book-chapter">Chapter 17</p>

@@ -42,10 +42,11 @@
 }
 
 .book-actions {
-  margin: 0.75em 0 0 0;
+  margin: 0.75em auto 0 auto;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  max-width: 20em;
 }
 
 .book-separator {
@@ -140,7 +141,86 @@
 }
 
 @media (min-width: 768px) {
+  .book {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    padding: 2em;
+  }
+
+  .book-header {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .book-title {
+    font-size: 1.75rem;
+  }
+
+  .book-author {
+    margin: 0;
+  }
+
+  .book-category,
+  .book-author {
+    font-size: 1rem;
+  }
+
+  .book-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.35em;
+    margin: 0;
+    padding: 0;
+  }
+
   .book-separator {
-    transform: rotate(90deg);
+    margin: 1em 0;
+  }
+
+  .book-button {
+    width: max-content;
+    padding: 0;
+  }
+
+  .book-button {
+    width: max-content;
+    transition: 0.15s;
+  }
+
+  .book-button:hover {
+    color: var(--CL-primary-black-two);
+  }
+
+  .book-separator {
+    pointer-events: none;
+  }
+
+  .book-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    margin: 0;
+  }
+
+  .book-right {
+    text-align: left;
+  }
+
+  .book-part,
+  .book-button.update {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .book-chapter {
+    font-size: 1.25rem;
+    margin: 0.5em 0;
+  }
+
+  .book-button.update {
+    margin: 1em 0 0 0;
   }
 }
